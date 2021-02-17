@@ -1,13 +1,62 @@
+<html>
+    <head>
+        <style>
+            table, th, td {
+                border: 1px solid gray
+            }
+        </style>
+    </head>
+
+
 <body>
 
     <tt>
 
-Annotating Kubernetes Services for Humans
-=========================================
+Annotating Kubernetes Services for Humans<br>
+=========================================<br>
 
-This page outlines a convention for using annotations to help developers manage Kubernetes services. 
-These annotations can be applied to a Kubernetes service with kubectl annotate. For example:
 
-kubectl annotate service MYSERVICE a8r.io/owner=”sallydev”
+<p>This page outlines a convention for using annotations to help developers manage Kubernetes services.
+These annotations can be applied to a Kubernetes service with kubectl annotate. For example:</p>
+
+<p>kubectl annotate service MYSERVICE a8r.io/owner=”sallydev”</p>
+
+<table>
+    <tr>
+        <th>
+            Annotation
+        </th>
+        <th>
+            Description
+        </th>
+    </tr>
+    <tr>
+        <td>
+            a8r.io/description
+        </td>
+        <td>
+            Unstructured text description of the service for humans.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            a8r.io/owner
+        </td>
+        <td>
+            GitHub or equivalent username (prefix with @), email address, or unstructured owner description.
+        </td>
+    </tr>
+</table>
+
+
+<p>
+Feedback? Suggestions? <a         href="https://github.com/ambassadorlabs/k8s-for-humans/">File an issue on GitHub</a>.
+</p>
+
+
+<p>Created by <a href="https://www.getambassador.io">Ambassador Labs</a></p>
+
 </tt>
 </body>
+
+</html>

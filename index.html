@@ -1,152 +1,172 @@
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <style>
-            table, th, td {
-                border: 1px solid gray
-            }
-        </style>
+        <meta charset="utf-8">
+        <title>Annotating Kubernetes Services for Humans</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
-
-
-<body>
-
-    <tt>
-
-Annotating Kubernetes Services for Humans<br>
-=========================================<br>
-
-
-<p>This page outlines a convention for using annotations to help developers manage Kubernetes services.
-These annotations can be applied to a Kubernetes service with kubectl annotate. For example:</p>
-
-<p>kubectl annotate service MYSERVICE a8r.io/owner=”sallydev”</p>
-
-<table>
-    <tr>
-        <th>
-            Annotation
-        </th>
-        <th>
-            Description
-        </th>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/description
-        </td>
-        <td>
-            Unstructured text description of the service for humans.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/owner
-        </td>
-        <td>
-            GitHub or equivalent username (prefix with @), email address, or unstructured owner description.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/chat
-        </td>
-        <td>
-            Slack channel (prefix with #), or link to other external chat system.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/bugs
-        </td>
-        <td>
-            Link to external bug tracker.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/logs
-        </td>
-        <td>
-            Link to external log viewer.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/documentation
-        </td>
-        <td>
-            Link to external project documentation.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/repository
-        </td>
-        <td>
-            Link to external VCS repository.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/support
-        </td>
-        <td>
-            Link to external support center.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/runbook
-        </td>
-        <td>
-            Link to external project runbook.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/incidents
-        </td>
-        <td>
-            Link to external incident dashboard.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/uptime
-        </td>
-        <td>
-            Link to external uptime dashboard.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/performance
-        </td>
-        <td>
-            Link to external performance dashboard.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            a8r.io/dependencies
-        </td>
-        <td>
-            Unstructured text description of the service dependencies for humans.
-        </td>
-    </tr>
-
-
-</table>
-
-
-<p>
-Feedback? Suggestions? <a href="https://github.com/ambassadorlabs/k8s-for-humans/">File an issue on GitHub</a>.
-</p>
-
-
-<p>Created by <a href="https://www.getambassador.io">Ambassador Labs</a></p>
-
-</tt>
-</body>
-
+    <body>
+        <section>
+            <h1>
+                Annotating Kubernetes Services for Humans
+            </h1>
+            <p class="intro">
+                This page outlines a convention for using annotations to help developers manage Kubernetes services.
+                <br />
+                These annotations can be applied to a Kubernetes service with <code>kubectl annotate</code>.
+            </p>
+            <p class="example">
+                <strong>For example:</strong>
+                <br />
+                <code>
+                    kubectl annotate service MYSERVICE a8r.io/owner=”sallydev”
+                </code>
+            </p>
+            <hr />
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Annotation
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/description</pre>
+                        </td>
+                        <td>
+                            <pre>Unstructured text description of the service for humans.</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/owner</pre>
+                        </td>
+                        <td>
+                            <pre>GitHub or equivalent username (prefix with @), email address, or unstructured owner description.</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/chat</pre>
+                        </td>
+                        <td>
+                            <pre>Slack channel (prefix with #), or link to other external chat system.</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/bugs</pre>
+                        </td>
+                        <td>
+                            <pre>Link to external bug tracker.</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/logs</pre>
+                        </td>
+                        <td>
+                            <pre>Link to external log viewer.</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/documentation</pre>
+                        </td>
+                        <td>
+                            <pre>Link to external project documentation.</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/repository</pre>
+                        </td>
+                        <td>
+                            <pre>Link to external VCS repository.</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/support</pre>
+                        </td>
+                        <td>
+                            <pre>Link to external support center.</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/runbook</pre>
+                        </td>
+                        <td>
+                            <pre>Link to external project runbook.</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/incidents</pre>
+                        </td>
+                        <td>
+                            <pre>Link to external incident dashboard.</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/uptime</pre>
+                        </td>
+                        <td>
+                            <pre>Link to external uptime dashboard.</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/performance</pre>
+                        </td>
+                        <td>
+                            <pre>Link to external performance dashboard.</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre>a8r.io/dependencies</pre>
+                        </td>
+                        <td>
+                            <pre>Unstructured text description of the service dependencies for humans.</pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="box">
+                <p>
+                    Feedback? Suggestions?
+                    <br />
+                    <a href="https://github.com/ambassadorlabs/k8s-for-humans/" title="File an issue on GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9998 1.49976C6.20132 1.49976 1.49976 6.32319 1.49976 12.2669C1.49976 17.0247 4.50913 21.056 8.681 22.481C8.73952 22.4937 8.79925 22.5 8.85913 22.4997C9.24819 22.4997 9.39819 22.2138 9.39819 21.9654C9.39819 21.7076 9.38881 21.0326 9.38413 20.1326C9.0368 20.214 8.68148 20.2564 8.32475 20.2591C6.30444 20.2591 5.84507 18.6888 5.84507 18.6888C5.36694 17.4466 4.67788 17.1138 4.67788 17.1138C3.76382 16.4716 4.67319 16.4529 4.7435 16.4529H4.74819C5.80288 16.5466 6.356 17.5685 6.356 17.5685C6.881 18.4872 7.58413 18.7451 8.21225 18.7451C8.62758 18.7368 9.03649 18.6409 9.41225 18.4638C9.506 17.7701 9.77788 17.2966 10.0779 17.0247C7.74819 16.7529 5.29663 15.8294 5.29663 11.7044C5.29663 10.5279 5.70444 9.56694 6.37475 8.81694C6.26694 8.54506 5.906 7.44819 6.47788 5.96694C6.55459 5.94859 6.63343 5.9407 6.71225 5.9435C7.09194 5.9435 7.94975 6.08881 9.36538 7.07319C11.0855 6.59193 12.9047 6.59193 14.6247 7.07319C16.0404 6.08881 16.8982 5.9435 17.2779 5.9435C17.3567 5.9407 17.4355 5.94859 17.5122 5.96694C18.0841 7.44819 17.7232 8.54506 17.6154 8.81694C18.2857 9.57163 18.6935 10.5326 18.6935 11.7044C18.6935 15.8388 16.2372 16.7482 13.8982 17.0154C14.2732 17.3482 14.6107 18.0044 14.6107 19.0076C14.6107 20.4466 14.5966 21.6091 14.5966 21.9607C14.5966 22.2138 14.7419 22.4997 15.131 22.4997C15.194 22.5 15.2568 22.4937 15.3185 22.481C19.4951 21.056 22.4997 17.0201 22.4997 12.2669C22.4997 6.32319 17.7982 1.49976 11.9998 1.49976Z"/>
+                        </svg>File an issue on GitHub
+                    </a>
+                </p>
+            </div>
+            <div class="box">
+                <p>
+                    Created by <a href="https://www.getambassador.io" title="Ambassador Labs">Ambassador Labs</a>
+                </p>
+                <div class="logo">
+                    <svg viewBox="0 0 750 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M74.1079 69.7946H51.3592L48.975 62.2446H25.1332L22.749 69.7946H0L24.4377 5.23141H49.6704L74.1079 69.7946ZM43.6104 45.2083L37.054 24.3971L30.4975 45.2083H43.6104ZM233.706 69.7946H192.083V5.23141H232.316C246.025 5.23141 251.985 14.1367 251.985 21.6868C251.985 29.721 247.117 35.1415 240.66 36.4967C247.813 37.5615 253.277 43.95 253.277 52.2746C253.277 61.2767 247.018 69.7946 233.706 69.7946ZM227.647 29.0434C229.733 29.0434 231.62 27.4946 231.62 25.1715C231.62 22.9452 229.733 21.4932 227.647 21.4932H212.15V29.0434H227.647ZM228.242 53.5329C231.124 53.5329 232.912 51.8875 232.912 49.4675C232.912 47.1442 231.124 45.305 228.242 45.305H212.15V53.5329H228.242ZM330.893 69.7946H308.144L305.76 62.2446H281.918L279.534 69.7946H256.785L281.223 5.23141H306.455L330.893 69.7946ZM300.395 45.2083L293.839 24.3971L287.283 45.2083H300.395ZM362.812 70.9562C348.706 70.9562 339.07 66.8908 332.017 60.6958L342.447 46.1762C347.415 50.8225 354.865 54.5008 363.806 54.5008C367.581 54.5008 371.157 53.5329 371.157 51.0162C371.157 44.8212 334.202 51.1129 334.202 25.6555C334.202 14.7175 343.54 4.26345 361.72 4.26345C372.548 4.26345 382.283 7.26416 389.833 13.2655L379.104 27.1074C373.342 22.8484 365.892 20.7189 359.634 20.7189C355.66 20.7189 354.567 21.9772 354.567 23.6227C354.567 29.7209 391.422 24.4939 391.422 48.4996C391.422 62.7287 380.595 70.9562 362.812 70.9562ZM426.321 70.9562C412.216 70.9562 402.58 66.8908 395.527 60.6958L405.957 46.1762C410.925 50.8225 418.375 54.5008 427.317 54.5008C431.092 54.5008 434.667 53.5329 434.667 51.0162C434.667 44.8212 397.712 51.1129 397.712 25.6555C397.712 14.7175 407.05 4.26345 425.229 4.26345C436.058 4.26345 445.792 7.26416 453.342 13.2655L442.612 27.1074C436.854 22.8484 429.4 20.7189 423.142 20.7189C419.171 20.7189 418.079 21.9772 418.079 23.6227C418.079 29.7209 454.933 24.4939 454.933 48.4996C454.933 62.7287 444.104 70.9562 426.321 70.9562ZM530.067 69.7946H507.317L504.933 62.2446H481.092L478.708 69.7946H455.958L480.396 5.23141H505.629L530.067 69.7946ZM499.567 45.2083L493.012 24.3971L486.454 45.2083H499.567ZM565.958 69.7946H536.254V5.23141H565.858C586.721 5.23141 602.217 16.847 602.217 37.4647C602.217 58.0825 586.721 69.7946 565.958 69.7946ZM565.858 52.7583C575.892 52.7583 581.854 45.5954 581.854 37.4647C581.854 28.7529 576.688 22.2676 565.958 22.2676H556.321V52.7583H565.858ZM644.667 70.9562C624.204 70.9562 608.408 57.4046 608.408 37.5614C608.408 17.7182 624.204 4.16666 644.667 4.16666C665.133 4.16666 680.925 17.7182 680.925 37.5614C680.925 57.4046 665.133 70.9562 644.667 70.9562ZM644.667 53.7267C654.304 53.7267 660.562 46.5633 660.562 37.5614C660.562 28.5594 654.304 21.3965 644.667 21.3965C635.033 21.3965 628.775 28.5594 628.775 37.5614C628.775 46.5633 635.033 53.7267 644.667 53.7267ZM750 69.7946H727.15L718.012 49.4675H710.762V69.7946H690.692V5.23141H726.058C741.554 5.23141 749.9 15.2982 749.9 27.3978C749.9 38.5294 743.246 44.4342 737.979 46.9508L750 69.7946ZM722.979 32.4312C726.358 32.4312 729.537 30.8825 729.537 27.301C729.537 23.8163 726.358 22.2676 722.979 22.2676H710.762V32.4312H722.979Z" fill="#272733"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M79.2237 2.62665V72.4937L179.576 2.62665V72.4937L79.2237 2.62665Z" fill="#F24E1E"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+    </body>
 </html>

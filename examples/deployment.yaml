@@ -20,15 +20,15 @@ metadata:
     # Link to external VCS repository.
     a8r.io/repository: "https://github.com/ambassadorlabs/k8s-for-humans"
     # Link to external support center.
-    a8r.io/support: "https://xenbooth.support"
+    a8r.io/support: "https://xenbooth.support/k8s-for-humans"
     # Link to external project runbook.
     a8r.io/runbook: "https://github.com/ambassadorlabs/k8s-for-humans/wiki/runbook"
     # Link to external incident dashboard.
-    a8r.io/incidents: ""
+    a8r.io/incidents: "https://opswizardry.sre/k8s-for-humans"
     # Link to external uptime dashboard.
     a8r.io/uptime: "https://uptimeallthetime.monitor/k8s-for-humans"
     # Link to external performance dashboard.
-    a8r.io/performance: "https://hardbetterfasterstronger.monitor/k8s-for-humans"
+    a8r.io/performance: "https://harderbetterfasterstronger.monitor/k8s-for-humans"
     # Unstructured text description of the service dependencies for humans.
     a8r.io/dependencies: "Empathy and understanding for those who don't know the complexities of your service."  
 spec:

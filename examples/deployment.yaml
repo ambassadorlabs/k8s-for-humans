@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: k8s-for-humans
+  name: k8s-for-humans
+  annotations:
+    # Unstructured text description of the service for humans.
+    a8r.io/description: "This is an example Deployment that makes use of the k8s for humans annotations described by a8r.io."
+    # GitHub or equivalent username (prefix with @), email address, or unstructured owner description.
+    a8r.io/owner: "@octocat"
+    # Slack channel (prefix with #), or link to other external chat system.
+    a8r.io/chat: "#k8s-for-humans"
+    # Link to external bug tracker.
+    a8r.io/bugs: "https://github.com/ambassadorlabs/k8s-for-humans/issues"
+    # Link to external log viewer.
+    a8r.io/logs: "https://k8s-for-humans.logana.com/"
+    # Link to external project documentation.
+    a8r.io/documentation: "https://github.com/ambassadorlabs/k8s-for-humans/wiki"
+    # Link to external VCS repository.
+    a8r.io/repository: "https://github.com/ambassadorlabs/k8s-for-humans"
+    # Link to external support center.
+    a8r.io/support: "https://xenbooth.support/k8s-for-humans"
+    # Link to external project runbook.
+    a8r.io/runbook: "https://github.com/ambassadorlabs/k8s-for-humans/wiki/runbook"
+    # Link to external incident dashboard.
+    a8r.io/incidents: "https://opswizardry.sre/k8s-for-humans"
+    # Link to external uptime dashboard.
+    a8r.io/uptime: "https://uptimeallthetime.monitor/k8s-for-humans"
+    # Link to external performance dashboard.
+    a8r.io/performance: "https://harderbetterfasterstronger.monitor/k8s-for-humans"
+    # Unstructured text description of the service dependencies for humans.
+    a8r.io/dependencies: "Empathy and understanding for those who don't know the complexities of your service."  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - image: nginx:latest
+        name: nginx
+        resources: {}
